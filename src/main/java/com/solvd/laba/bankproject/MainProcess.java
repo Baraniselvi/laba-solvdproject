@@ -3,8 +3,8 @@ package com.solvd.laba.bankproject;
 public class MainProcess {
 
     public static void main(String[] args) {
-        Customer customers = new Customer("John",233333,5000, 500000);
-        Customer customers1 = new Customer("Jack",343434,600,78980);
+        Customer customers = new Customer("John", 233333, 5000, 500000);
+        Customer customers1 = new Customer("Jack", 343434, 600, 78980);
         System.out.println();
         customers.createaccount();
         customers.deposit();
@@ -13,7 +13,7 @@ public class MainProcess {
 
         NetBanking netbanking1 = new NetBanking();
         netbanking1.isValidaccount();
-        netbanking1.transfer(343434,3000,50000);
+        netbanking1.transfer(343434, 3000, 50000);
 
         netbanking1.currdate();
 
@@ -28,45 +28,25 @@ public class MainProcess {
         accounttype.calculateinterest();
         System.out.println();
 
-        AtmTransaction transaction = new AtmTransaction(500000,300);
+        AtmTransaction transaction = new AtmTransaction(500000, 300);
         transaction.checkbalance();
         transaction.withdraw();
         System.out.println();
 
-        FrontOfficeOperations operations = new FrontOfficeOperations(2222,"s2323",5000);
+        FrontOfficeOperations operations = new FrontOfficeOperations(2222, "s2323", 5000);
         operations.checkdeposit();
 
         LoanSection loan = new LoanSection();
         System.out.println();
-        System.out.println("Interest calculation for loan " );
+        System.out.println("Interest calculation for loan ");
         loan.housingloan();
         loan.personalloan();
 
-        StockAndInvestment stocks = new StockAndInvestment(130,10);
+        StockAndInvestment stocks = new StockAndInvestment(130, 10);
         stocks.buystock();
 
-        GlobalBanking banking = new GlobalBanking("Neenah","7th street,wisconsin","USA",2333333,556);
-        System.out.println("Location :" +banking.branchname +  " " + banking .branchaddress + " "+ banking .country + " " + banking.routingnumber+ " " + banking.branchcode);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        GlobalBanking banking = new GlobalBanking("Neenah", "7th street,wisconsin", "USA", 2333333, 556);
+        System.out.println("Location :" + banking.branchname + " " + banking.branchaddress + " " + banking.country + " " + banking.routingnumber + " " + banking.branchcode);
 
 
     }

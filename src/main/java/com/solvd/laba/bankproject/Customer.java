@@ -14,6 +14,7 @@ public class Customer extends Bank {
     private int accountnumber;
 
 
+
     private double balance;
 
     private double amount;
@@ -33,22 +34,19 @@ public class Customer extends Bank {
     {
 
         System.out.println("KYC(know your customer must be cleared for opening Account)");
-        while (true)
-        {
-            System.out.println("Eligible for opening a account");
-            break;
-
+        System.out.println();
 
         }
 
 
-        }
+
 
     @Override
     public void currentbalance() {
         System.out.println();
         if (balance<0)
         {
+
             System.out.println("Zero Balance in your account");
         }
             

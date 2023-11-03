@@ -2,10 +2,9 @@ package com.solvd.laba.bankproject;
 
 import java.util.Date;
 
-public abstract class Bank  {
+public abstract class Bank {
 
     private String customername;
-
 
 
     private int accountnumber;
@@ -13,13 +12,7 @@ public abstract class Bank  {
     public String bankname;
 
 
-
-
-
-
-
     protected String accounttype;
-
 
 
     public Bank(String customername, int accountnumber) {
@@ -27,11 +20,14 @@ public abstract class Bank  {
         this.customername = customername;
         this.accountnumber = accountnumber;
     }
+
     public abstract void createaccount();
+
     public abstract void currentbalance();
+
     public abstract void withdraw();
-    public abstract void  deposit();
+
+    public abstract void deposit();
 
 
-
-    }
+}

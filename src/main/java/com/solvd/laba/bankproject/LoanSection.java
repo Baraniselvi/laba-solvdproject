@@ -3,23 +3,16 @@ package com.solvd.laba.bankproject;
 public class LoanSection {
 
     public double principalamount;
-    protected int  loaninterestrate;
+    protected int loaninterestrate;
 
     protected int creditscore;
 
-    public  int numberofmonths ;
+    public int numberofmonths;
 
 
-
-
-
-
-
-    public static void calculateinterest(double principalamount,int loaninterestrate)
-
-    {
-        double calculate = (principalamount * loaninterestrate * 12)/100;
-        System.out.println("Monthly EMI is"  +  calculate);
+    public static void calculateinterest(double principalamount, int loaninterestrate) {
+        double calculate = (principalamount * loaninterestrate * 12) / 100;
+        System.out.println("Monthly EMI is" + calculate);
 
     }
 
@@ -32,7 +25,6 @@ public class LoanSection {
         System.out.println("Housing loan interest as per floating rate");
 
     }
-
 
 
 }

@@ -2,7 +2,7 @@ package com.solvd.laba.bankproject;
 
 import java.util.Scanner;
 
-public  class AccountType {
+public class AccountType {
 
     protected int accountname;
 
@@ -17,17 +17,12 @@ public  class AccountType {
     public int term;
 
 
-
-
-
-    public void calculateinterest()
-
-    {
+    public void calculateinterest() {
         System.out.println();
         System.out.println("To calculate interest please enter the following");
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Principal amount");
-         double pa = sc.nextDouble();
+        double pa = sc.nextDouble();
         System.out.println(pa);
         System.out.println("Enter the interest rate");
         double in = sc.nextDouble();
@@ -38,7 +33,7 @@ public  class AccountType {
         int tm = sc.nextInt();
         System.out.println(tm);
         System.out.println();
-        double interestamount = (pa*in*tm)/100 ;
+        double interestamount = (pa * in * tm) / 100;
         System.out.println("Interest for Savings Account " + interestamount);
     }
 

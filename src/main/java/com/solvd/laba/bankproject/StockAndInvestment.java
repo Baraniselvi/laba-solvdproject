@@ -9,30 +9,24 @@ public class StockAndInvestment {
     private double totalstockvalue;
 
 
-
-    public  StockAndInvestment(double priceperunit, double stocknumber)
-
-    {
-        this.priceperunit =priceperunit;
+    public StockAndInvestment(double priceperunit, double stocknumber) {
+        this.priceperunit = priceperunit;
         this.stocknumber = stocknumber;
 
 
     }
 
 
-    public void buystock()
-    {
+    public void buystock() {
         System.out.println();
         totalstockvalue = stocknumber * priceperunit;
         System.out.println("Totalstockvalue " + totalstockvalue);
 
 
-
-
     }
 
 
-    }
+}
 
 
 
