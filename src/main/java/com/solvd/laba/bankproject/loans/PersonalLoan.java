@@ -4,7 +4,7 @@ import com.solvd.laba.bankproject.*;
 import com.solvd.laba.bankproject.Accounts.Account;
 import com.solvd.laba.bankproject.Accounts.Interest;
 
-public class PersonalLoan extends BankName implements Loan ,Interest {
+public class PersonalLoan extends BankName implements Loan, Interest {
 
     private double balance;
 
@@ -24,7 +24,7 @@ public class PersonalLoan extends BankName implements Loan ,Interest {
 
     @Override
     public void applyForLoan(double amount) {
-        System.out.println("Loan Applying for "  +amount);
+        System.out.println("Loan Applying for " + amount);
 
     }
 
@@ -33,8 +33,6 @@ public class PersonalLoan extends BankName implements Loan ,Interest {
         double interest = balance * interestrate;
         System.out.println("Interest calculated: " + interest);
         return interest;
-
-
 
 
     }

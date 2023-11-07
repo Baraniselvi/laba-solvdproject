@@ -4,13 +4,12 @@ import java.util.Objects;
 
 public class Employee extends Person {
 
-       private Location location;
-       private String position;
-       private double salary;
+    private Location location;
+    private String position;
+    private double salary;
 
-    public Employee(String firstname ,String lastname ,Location location, String position, double salary)
-     {
-         super(firstname,lastname);
+    public Employee(String firstname, String lastname, Location location, String position, double salary) {
+        super(firstname, lastname);
         this.location = location;
         this.position = position;
         this.salary = salary;

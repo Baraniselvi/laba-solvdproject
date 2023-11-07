@@ -3,7 +3,6 @@ package com.solvd.laba.bankproject;
 import com.solvd.laba.bankproject.Accounts.Account;
 
 
-
 import java.time.LocalDate;
 
 public class Transaction {
@@ -12,7 +11,7 @@ public class Transaction {
     protected Person customerName;
     private String type;
     private double amount;
-    public  LocalDate transactionDate;
+    public LocalDate transactionDate;
 
     public Transaction(Transaction transaction, Person customerNamename, String type, double amount) {
         this.transaction = transaction;
@@ -45,11 +44,6 @@ public class Transaction {
     public void setAmount(double amount) {
         this.amount = amount;
     }
-
-
-
-
-
 
 
 }
