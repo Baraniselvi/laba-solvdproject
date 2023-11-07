@@ -1,89 +1,64 @@
 package com.solvd.laba.bankproject;
 
-import java.time.LocalDate;
-import java.util.Date;
+import com.solvd.laba.bankproject.Accounts.Account;
 
 
+import java.util.Arrays;
 
+public class Customer extends Person {
+    private Account[] accounts;
+    private Transaction[] transactions;
 
-public class Customer extends Bank {
+    public Customer(String firstname, String lastname, Account[] accounts, Transaction[] transactions) {
+        super(firstname, lastname);
+        this.accounts = accounts;
+        this.transactions = transactions;
+    }
 
+    public Account[] getAccounts() {
+        return accounts;
+    }
 
-    private String customername;
+    public void setAccounts(Account[] accounts) {
+        this.accounts = accounts;
+    }
 
-    private int accountnumber;
+    public Transaction[] getTransactions() {
+        return transactions;
+    }
 
-
-
-    private double balance;
-
-    private double amount;
-    ;
-
-
-    public Customer(String customername, int accountnumber, double balance,double amount) {
-        super(customername, accountnumber);
-        System.out.println("Customer name: "+ customername + "  Accountnumber: " +accountnumber);
-        this.balance = balance;
-        this.amount =amount;
-
+    public void setTransactions(Transaction[] transactions) {
+        this.transactions = transactions;
     }
 
     @Override
-    public void createaccount()
-    {
-
-        System.out.println("KYC(know your customer must be cleared for opening Account)");
-        System.out.println();
-
-        }
-
-
-
-
-    @Override
-    public void currentbalance() {
-        System.out.println();
-        if (balance<0)
-        {
-
-            System.out.println("Zero Balance in your account");
-        }
-            
-        else
-
-        {
-            balance = balance;
-            System.out.println("Current Balance : " + balance);
-        }
-
-
+    public String getFullNAME() {
+        return firstname + lastname;
     }
 
     @Override
-    public void withdraw() {
-        System.out.println();
-        System.out.println("Enter the amount to be withdrawn");
-        if(amount>0 && amount <=balance)
-        {
-            balance = balance - amount;
-            System.out.println("Amount withdrawn : " + amount + " Balance after withdrawal : " + balance);
-        }
-
-
+    public String toString() {
+        return "Customer{" +
+                "accounts=" + Arrays.toString(accounts) +
+                ", transactions=" + Arrays.toString(transactions) +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                '}';
     }
 
     @Override
-    public void deposit() {
-        System.out.println();
-        System.out.println("Enter the amount to be deposited");
-        balance = balance + amount;
-        System.out.println("Amount deposited : " + amount  + "  New Balance  :" +  balance ) ;
-
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Customer customer)) return false;
+        if (!super.equals(o)) return false;
+        return Arrays.equals(accounts, customer.accounts) && Arrays.equals(transactions, customer.transactions);
     }
 
-
-
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + Arrays.hashCode(accounts);
+        result = 31 * result + Arrays.hashCode(transactions);
+        return result;
+    }
 }
-
-

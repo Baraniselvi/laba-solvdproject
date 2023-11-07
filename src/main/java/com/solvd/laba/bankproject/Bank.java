@@ -1,33 +1,50 @@
 package com.solvd.laba.bankproject;
 
-import java.util.Date;
+public class Bank {
 
-public abstract class Bank {
+    private BankName[] bankname;
+    private Customer[] customer;
 
-    private String customername;
+    private Location[] location;
 
+    private Employee[] employee;
 
-    private int accountnumber;
-    private double balance;
-    public String bankname;
-
-
-    protected String accounttype;
-
-
-    public Bank(String customername, int accountnumber) {
-
-        this.customername = customername;
-        this.accountnumber = accountnumber;
+    public Bank(BankName[] bankname, Customer[] customer, Location[] location, Employee[] employee) {
+        this.bankname = bankname;
+        this.customer = customer;
+        this.location = location;
+        this.employee = employee;
     }
 
-    public abstract void createaccount();
+    public BankName[] getBankname() {
+        return bankname;
+    }
 
-    public abstract void currentbalance();
+    public void setBankname(BankName[] bankname) {
+        this.bankname = bankname;
+    }
 
-    public abstract void withdraw();
+    public Customer[] getCustomer() {
+        return customer;
+    }
 
-    public abstract void deposit();
+    public void setCustomer(Customer[] customer) {
+        this.customer = customer;
+    }
 
+    public Location[] getLocation() {
+        return location;
+    }
 
+    public void setLocation(Location[] location) {
+        this.location = location;
+    }
+
+    public Employee[] getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee[] employee) {
+        this.employee = employee;
+    }
 }
