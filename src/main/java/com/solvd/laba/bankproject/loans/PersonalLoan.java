@@ -1,10 +1,8 @@
 package com.solvd.laba.bankproject.loans;
 
-import com.solvd.laba.bankproject.*;
-import com.solvd.laba.bankproject.Accounts.Account;
-import com.solvd.laba.bankproject.Accounts.Interest;
+import com.solvd.laba.bankproject.bank.BankName;
 
-public class PersonalLoan extends BankName implements Loan, Interest {
+public class PersonalLoan extends BankName {
 
     private double balance;
 
@@ -16,25 +14,26 @@ public class PersonalLoan extends BankName implements Loan, Interest {
         this.interestrate = interestrate;
     }
 
-    @Override
-    public void checkEligibilty() {
-        System.out.println("Credit score will be checked");
-
+    public double getBalance() {
+        return balance;
     }
 
-    @Override
-    public void applyForLoan(double amount) {
-        System.out.println("Loan Applying for " + amount);
-
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
-    @Override
+    public double getInterestrate() {
+        return interestrate;
+    }
+
+    public void setInterestrate(double interestrate) {
+        this.interestrate = interestrate;
+    }
+
     public double calculateInterest() {
         double interest = balance * interestrate;
         System.out.println("Interest calculated: " + interest);
         return interest;
-
-
     }
 }
 

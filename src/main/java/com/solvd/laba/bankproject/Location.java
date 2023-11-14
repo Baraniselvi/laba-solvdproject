@@ -1,11 +1,15 @@
 package com.solvd.laba.bankproject;
 
-public class Location {
+import com.solvd.laba.bankproject.bank.BankName;
+import com.solvd.laba.bankproject.person.Employee;
+
+public class Location implements LocationInterface {
     private String city;
     private String country;
     protected String phonenumber;
 
     public Location(String city, String country, String phonenumber) {
+        super();
         this.city = city;
         this.country = country;
         this.phonenumber = phonenumber;
@@ -33,5 +37,10 @@ public class Location {
 
     public void setPhonenumber(String phonenumber) {
         this.phonenumber = phonenumber;
+    }
+
+    @Override
+    public String getLocationInfo() {
+        return city + country;
     }
 }

@@ -1,8 +1,14 @@
-package com.solvd.laba.bankproject;
+package com.solvd.laba.bankproject.person;
 
+import com.solvd.laba.bankproject.Accounts.Account;
+import com.solvd.laba.bankproject.Customer.CustomerService;
+import com.solvd.laba.bankproject.Location;
+import com.solvd.laba.bankproject.transactions.Transaction;
+
+import java.util.Arrays;
 import java.util.Objects;
 
-public class Employee extends Person {
+public class Employee extends Person implements Iwork, CustomerService {
 
     private Location location;
     private String position;
@@ -66,5 +72,21 @@ public class Employee extends Person {
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), location, position, salary);
+    }
+
+    @Override
+    public void work() {
+        System.out.println("I am an employee");
+    }
+
+    @Override
+    public void reportLostorStolencard() {
+        System.out.println("Report stolen or lost debit card");
+    }
+
+    @Override
+    public void requestNewDebitcard() {
+        System.out.println("New Debit card process");
+
     }
 }

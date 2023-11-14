@@ -1,4 +1,4 @@
-package com.solvd.laba.bankproject;
+package com.solvd.laba.bankproject.person;
 
 import java.util.Objects;
 

@@ -1,36 +1,34 @@
 package com.solvd.laba.bankproject.Accounts;
 
-import com.solvd.laba.bankproject.Customer;
-import com.solvd.laba.bankproject.CustomerService;
-import com.solvd.laba.bankproject.Payments;
-import com.solvd.laba.bankproject.Person;
-
-import java.time.LocalDate;
+import com.solvd.laba.bankproject.Customer.CustomerService;
+import com.solvd.laba.bankproject.transactions.Payments;
 
 
-public  class Account implements Payments ,CustomerService {
+public class Account {
 
-    private String  accountnumber;
+    private String accountID;
 
     private double balance;
 
+    protected double amount;
+
     public static final double minimumBalance = 0.0;
 
-
-    public Account(String accountnumber, double balance) {
-        this.accountnumber = accountnumber;
+    public Account(String accountID, double balance, double amount) {
+        this.accountID = accountID;
         this.balance = balance;
+        this.amount = amount;
     }
 
-    public String getAccountnumber() {
-        return accountnumber;
+    public String getAccountID() {
+        return accountID;
     }
 
-    public void setAccountnumber(String accountnumber) {
-        this.accountnumber = accountnumber;
+    public void setAccountID(String accountID) {
+        this.accountID = accountID;
     }
 
-       public double getBalance() {
+    public double getBalance() {
         return balance;
     }
 
@@ -38,27 +36,11 @@ public  class Account implements Payments ,CustomerService {
         this.balance = balance;
     }
 
-    @Override
-    public double checkBalance() {
-        return balance;
+    public double getAmount() {
+        return amount;
     }
 
-    @Override
-    public void printReceipt() {
-        System.out.println("Account number :" + accountnumber + " Balance " + balance);
-
-    }
-
-
-    @Override
-    public void customerInquiry(String inquiry) {
-        System.out.println("Please write your inquiries");
-
-    }
-
-    @Override
-    public void solvedInquiry(String issue) {
-        System.out.println("This inquiry is solved");
-
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 }

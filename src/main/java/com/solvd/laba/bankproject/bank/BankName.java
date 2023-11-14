@@ -1,7 +1,6 @@
-package com.solvd.laba.bankproject;
+package com.solvd.laba.bankproject.bank;
 
 public class BankName {
-
     private String name;
 
     public BankName(String name) {
@@ -16,7 +15,8 @@ public class BankName {
         this.name = name;
     }
 
-    final void WelcomeMesage() {
-        System.out.println("Welcome to xxxx bank");
+    final void WelcomeMessage() {
+        System.out.println("Welcome to Chase bank");
     }
+
 }
